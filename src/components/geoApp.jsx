@@ -14,7 +14,7 @@ const Geo = () => {
 
   useEffect(() => {
     // Initialize WebSocket connection
-    const ws = new WebSocket('ws://geolocation-s28f.onrender.com/ws/socket-server/');
+    const ws = new WebSocket('wss://geolocation-s28f.onrender.com/ws/socket-server/');
     
     ws.onopen = () => {
       console.log('WebSocket connection opened');
