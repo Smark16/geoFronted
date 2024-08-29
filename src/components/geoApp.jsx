@@ -74,6 +74,14 @@ const Geo = () => {
     }
   };
 
+  useEffect(() => {
+    if (lat && long) {
+      setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+      }, 1000);
+    }
+  }, [lat, long]);
+
 
   // Fix for default icon issue in Leaflet
   delete L.Icon.Default.prototype._getIconUrl;
